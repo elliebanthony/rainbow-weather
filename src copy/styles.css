@@ -1,0 +1,76 @@
+.container {
+  background: linear-gradient(
+    101.9deg,
+    rgb(253, 183, 220) 25%,
+    rgb(240, 213, 190) 38.1%,
+    rgb(249, 240, 206) 55.5%,
+    rgb(253, 244, 210) 67.3%,
+    rgb(222, 248, 226) 85.2%,
+    rgb(200, 247, 242) 103.6%
+  );
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 60%;
+}
+h1 {
+  position: relative;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  color: slateblue;
+}
+button {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(253, 183, 220);
+  box-shadow: steelblue;
+  border-radius: 15px;
+}
+h2 {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: slateblue;
+  margin: 0 auto;
+  display: block;
+  font-size: 25px;
+}
+h3 {
+  color: slateblue;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+h4 {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: slateblue;
+  font-size: 40px;
+  text-align: center;
+}
+.current {
+  text-align: center;
+  color: slateblue;
+  font-family: "Poppins", sans-serif;
+}
+.wind {
+  font-family: "Poppins", sans-serif;
+  color: mediumslateblue;
+  text-align: right;
+}
+.humidity {
+  color: mediumslateblue;
+  text-align: right;
+  margin: 0 auto;
+}
+.col {
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+.row {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  color: slateblue;
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+}

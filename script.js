@@ -36,10 +36,11 @@ function showTemp(response) {
   let state = document.querySelector("#state");
   state.innerHTML = `${conditions}`;
 
-  let icon = document.querySelector("#icon");
-  icon.setAttribute =
-    (src,
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  let icon = response.data.weather[0].icon;
+  console.log(icon);
+  let iconElement = document.querySelector("icon");
+  iconElement.setAttribute =
+    ("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
 }
 
 function search(event) {

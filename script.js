@@ -15,32 +15,24 @@ let day = days[now.getDay()];
 h3.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemp(response) {
-  let temp = Math.round(response.data.main.temp);
-  console.log(temp);
-  console.log(response);
   let h4 = document.querySelector("h4");
-  h4.innerHTML = `${temp}° C`;
+  h4.innerHTML = `${Math.round(response.data.main.temp)}° C`;
 
-  let wind = Math.round(response.data.wind.speed);
-  console.log(wind);
   let windSpeed = document.querySelector("#windSpeed");
-  windSpeed.innerHTML = `Wind Speed: ${wind} m/ph`;
+  windSpeed.innerHTML = `Wind Speed: ${Math.round(
+    response.data.wind.speed
+  )} m/ph`;
 
-  let humid = Math.round(response.data.main.humidity);
-  console.log(humid);
   let humidity = document.querySelector("#humid");
-  humidity.innerHTML = `Humidity: ${humid} %`;
+  humidity.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)} %`;
 
-  let conditions = response.data.weather[0].description;
-  console.log(conditions);
   let state = document.querySelector("#state");
-  state.innerHTML = `${conditions}`;
+  state.innerHTML = `${response.data.weather[0].description}`;
 
-  let icon = response.data.weather[0].icon;
-  console.log(icon);
   let iconElement = document.querySelector("icon");
   iconElement.setAttribute =
-    ("src", `http://openweathermap.org/img/wn/${icon}@2x.png`);
+    ("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(event) {

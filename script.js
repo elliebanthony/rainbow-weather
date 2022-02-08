@@ -35,6 +35,11 @@ function showTemp(response) {
   console.log(conditions);
   let state = document.querySelector("#state");
   state.innerHTML = `${conditions}`;
+
+  let iconImage = response.data.weather[0].icon;
+  console.log(iconImage);
+  let icon = document.querySelector("#icon");
+  icon.innerHTML = `${iconImage}`;
 }
 
 function search(event) {
@@ -53,17 +58,3 @@ function seaarchCity(city) {
 
 let cityResult = document.querySelector("form");
 cityResult.addEventListener("submit", search);
-
-function getLocation(position) {
-  let lat = Math.round(position.coords.longitude);
-  let long = Math.round(position.coords.latitude);
-  console.log(lat);
-  console.log(long);
-  let apiKey = "61585f15453918f9f78604040a26d7b6";
-  let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
-  axios.get(url).then(showTemp);
-
-  let coordinates = document.querySelector("h2");
-  coordinates.innerHTML = `Latitude :${lat}, Longitude: ${long}  `;
-}
-navigator.geolocation.getCurrentPosition(getLocation);

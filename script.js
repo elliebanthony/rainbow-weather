@@ -53,3 +53,21 @@ function seaarchCity(city) {
 
 let cityResult = document.querySelector("form");
 cityResult.addEventListener("submit", search);
+
+function celConvert(event) {
+  event.preventDefault();
+
+  let h4 = document.querySelector("#number");
+  h4.innerHTML = `0°`;
+}
+let cel = document.querySelector("#celc");
+cel.addEventListener("click", celConvert);
+
+function fahConvert(event) {
+  event.preventDefault();
+
+  let h4 = document.querySelector("#number");
+  h4.innerHTML = `21°`;
+}
+let fah = document.querySelector("#fahr");
+fah.addEventListener("click", fahConvert);

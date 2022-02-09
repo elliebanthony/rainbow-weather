@@ -47,7 +47,7 @@ function search(event) {
 
 function seaarchCity(city) {
   let apiKey = "61585f15453918f9f78604040a26d7b6&";
-  let apiUrl = `https:/api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
 

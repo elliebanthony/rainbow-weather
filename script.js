@@ -46,7 +46,8 @@ function search(event) {
 }
 
 function seaarchCity(city) {
-  let apiUrl = `http:/api.openweathermap.org/data/2.5/weather?q=${city}&appid=61585f15453918f9f78604040a26d7b6&units=metric`;
+  let apiKey = "61585f15453918f9f78604040a26d7b6&";
+  let apiUrl = `http:/api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
 

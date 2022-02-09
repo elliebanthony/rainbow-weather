@@ -12,7 +12,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-h3.innerHTML = `${day} ${hours}:${minutes}`;
+h3.innerHTML = `Last Updated: ${day} ${hours}:${minutes}`;
 
 function showTemp(response) {
   let h4 = document.querySelector("h4");

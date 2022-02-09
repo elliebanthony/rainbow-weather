@@ -16,7 +16,7 @@ h3.innerHTML = `Last Updated: ${day} ${hours}:${minutes}`;
 
 function showTemp(response) {
   let number = document.querySelector("#number");
-  number.innerHTML = `${Math.round(response.data.main.temp)}° C`;
+  number.innerHTML = `${Math.round(response.data.main.temp)}`;
 
   let windSpeed = document.querySelector("#windSpeed");
   windSpeed.innerHTML = `Wind Speed: ${Math.round(
@@ -34,6 +34,7 @@ function showTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celcTemp = response.data.main.temp;
 }
 
 function search(event) {
@@ -54,11 +55,22 @@ function seaarchCity(city) {
 let cityResult = document.querySelector("form");
 cityResult.addEventListener("submit", search);
 
-function fahConvert(event) {
+let celcTemp = null;
+
+function fahrConvert(event) {
   event.preventDefault();
 
-  let h4 = document.querySelector("#number");
-  h4.innerHTML = `21°`;
+  let fahrTemp = document.querySelector("#number");
+  let fahrElement = (celcTemp * 9) / 5 + 32;
+  fahrTemp.innerHTML = Math.round(fahrElement);
 }
 let fah = document.querySelector("#fahr");
-fah.addEventListener("click", fahConvert);
+fah.addEventListener("click", fahrConvert);
+
+function celcConvert(event) {
+  event.preventDefault();
+  let celcElement = document.querySelector("#number");
+  celcElement.innerHTML = Math.round(celcTemp);
+}
+let celc = document.querySelector("#celc");
+celc.addEventListener("click", celcConvert);

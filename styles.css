@@ -79,9 +79,19 @@ img {
   font-family: "Poppins", sans-serif;
   padding: 10px;
   color: slateblue;
-  width: 100%;
   background-color: white;
   margin: 0 auto;
+  border-radius: 20px;
+}
+.forecast-date {
+  text-align: center;
+}
+.forecast-icon {
+  margin: 0 auto;
+  padding: 0px;
+}
+.forecast-temp {
+  text-align: center;
 }
 footer {
   text-align: center;

@@ -50,7 +50,7 @@ function showTemp(response) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "61585f15453918f9f78604040a26d7b6&";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 function displayForecast(response) {
@@ -98,29 +98,9 @@ function search(event) {
 
 function seaarchCity(city) {
   let apiKey = "61585f15453918f9f78604040a26d7b6&";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=imperial`;
   axios.get(apiUrl).then(showTemp);
 }
 
 let cityResult = document.querySelector("form");
 cityResult.addEventListener("submit", search);
-
-let celcTemp = null;
-
-function fahrConvert(event) {
-  event.preventDefault();
-
-  let fahrTemp = document.querySelector("#number");
-  let fahrElement = (celcTemp * 9) / 5 + 32;
-  fahrTemp.innerHTML = Math.round(fahrElement);
-}
-let fah = document.querySelector("#fahr");
-fah.addEventListener("click", fahrConvert);
-
-function celcConvert(event) {
-  event.preventDefault();
-  let celcElement = document.querySelector("#number");
-  celcElement.innerHTML = Math.round(celcTemp);
-}
-let celc = document.querySelector("#celc");
-celc.addEventListener("click", celcConvert);

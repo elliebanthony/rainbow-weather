@@ -74,8 +74,8 @@ function displayForecast(response) {
             class="forecast-icon"
           />
           <div class="forecast-temp">
-            <spann> ${Math.round(forecastDay.temp.max)}° </span>
-            <div> ${Math.round(forecastDay.temp.min)}°</div>
+            <spann> H: ${Math.round(forecastDay.temp.max)}° </span>
+            <div> L: ${Math.round(forecastDay.temp.min)}°</div>
           </div>
         </div>
 

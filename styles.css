@@ -59,12 +59,13 @@ img {
 .wind {
   font-family: "Poppins", sans-serif;
   color: mediumslateblue;
-  text-align: right;
+  text-align: left;
+  margin: 0 auto;
 }
 .humidity {
   color: mediumslateblue;
   text-align: right;
-  margin: 0 auto;
+  width: 90%;
 }
 .col-2 {
   margin: 0 auto;

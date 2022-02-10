@@ -17,14 +17,14 @@ h3.innerHTML = `Last Updated: ${day} ${hours}:${minutes}`;
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
   return days[day];
 }
 
 function showTemp(response) {
   let number = document.querySelector("#number");
-  number.innerHTML = `${Math.round(response.data.main.temp)}`;
+  number.innerHTML = `${Math.round(response.data.main.temp)} °F`;
 
   let windSpeed = document.querySelector("#windSpeed");
   windSpeed.innerHTML = `Wind Speed: ${Math.round(
@@ -42,7 +42,6 @@ function showTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  celcTemp = response.data.main.temp;
 
   getForecast(response.data.coord);
 }

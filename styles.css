@@ -54,6 +54,7 @@ img {
   text-align: center;
   color: slateblue;
   font-family: "Poppins", sans-serif;
+  font-size: 20px;
 }
 .wind {
   font-family: "Poppins", sans-serif;
@@ -65,7 +66,7 @@ img {
   text-align: right;
   margin: 0 auto;
 }
-.col {
+.col-2 {
   margin: 0 auto;
   padding: 5px;
   text-align: center;
@@ -80,13 +81,16 @@ img {
 }
 .forecast-date {
   text-align: center;
+  margin: 0 auto;
 }
 .forecast-icon {
   margin: 0 auto;
   padding: 0px;
+  text-align: center;
 }
 .forecast-temp {
   text-align: center;
+  margin: 0 auto;
 }
 footer {
   text-align: center;

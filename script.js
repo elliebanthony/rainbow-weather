@@ -37,6 +37,37 @@ function showTemp(response) {
   celcTemp = response.data.main.temp;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thurs", "Fri", "Sat", "Sun"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+    <div class="col-2">
+          <div class="forecast-date">${day}</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+            alt=""
+            width="40"
+            class="forecast-icon"
+          />
+          <div class="forecast-temp">
+            <span> 10° </span>
+            <span> 2°</span>
+          </div>
+        </div>
+
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
+
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input");
@@ -74,47 +105,3 @@ function celcConvert(event) {
 }
 let celc = document.querySelector("#celc");
 celc.addEventListener("click", celcConvert);
-
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    ` 
-    <div class="col-2">
-          <div class="forecast-date">Mon</div>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt=""
-            width="40"
-            class="forecast-icon"
-          />
-          <div class="forecast-temp">
-            <span> 10° </span>
-            <span> 2°</span>
-          </div>
-        </div>
-
-  `;
-  forecastHTML =
-    forecastHTML +
-    `
-       <div class="col-2">
-          <div class="forecast-date">Mon</div>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt=""
-            width="40"
-            class="forecast-icon"
-          />
-          <div class="forecast-temp">
-            <span> 10° </span>
-            <span> 2°</span>
-          </div>
-        </div>
-
-  `;
-  forecastHTML = `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-displayForecast();

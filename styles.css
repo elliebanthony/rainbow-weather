@@ -56,20 +56,17 @@ img {
   font-size: 20px;
 }
 .wind {
-  font-family: "Poppins", sans-serif;
   color: mediumslateblue;
-  text-align: left;
-  width: 100%;
   font-style: italic;
-  margin-left: 5%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .humidity {
   color: mediumslateblue;
-  text-align: right;
-  width: 100%;
   font-style: italic;
-  margin-left: 55%;
+  display: flex;
+  justify-content: space-evenly;
 }
 .col-2 {
   margin: 0 auto;
